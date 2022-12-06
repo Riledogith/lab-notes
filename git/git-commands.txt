@@ -1,0 +1,96 @@
+Git Commands
+
+======
+    Git
+======
+
+git status — information on the current repo
+
+git log
+	git log --oneline
+
+git init — create repository within current directory
+
+git add file.name — stage changes to files edited
+git add . — all modified folders will be staged
+
+git commit file.name — 
+(Use this to avoid text editor step) git commit -m ”my message” file.name
+
+git branch — give list of current branches in repo
+
+git branch <branch name> — create branch with branch name (makes branch but does not switch)
+	git branch -d <branch name> — delete branch
+	git branch -m <new name>**must be on branch you want to rename
+	git branch -v — more detailed view
+	git branch -r — view remote branch
+
+git switch <branch name> — switch between branches (HEAD)
+	git switch -c <branch-name> — creates new branch and switches to it
+	git switch - — returns to previous HEAD placement
+
+
+git merge <branch name> — merges branches, not commits. Will merge to wherever HEAD is at
+
+git diff — view changes between commits, branches, files, directory, etc. shows only diff between working directory and tree
+	git diff HEAD — shows diff between working directory and staged changes
+	git diff --staged (git diff --cached)
+	git diff HEAD <file.name file2.name> — shows diff between specific files
+	git diff <branch1..branch2> or <branch1 branch2> — show diff between two branches, order matters 	
+	git diff <commit#1..commit#2> or <commit#1 commit#2>— show diff between two commits
+
+git stash — save changes without committing, able to switch branches with uncommitted changes
+	git stash pop — remove recently stash and reapply to working copy
+	git stash apply — keeps stash as is AND applies stashed material on working copy
+	git stash list
+	git stash apply stash@{#}
+	git stash drop stash@{#}
+
+git checkout <commit-hash#> — enters Detached HEAD State and view prior commits
+git checkout <HEAD ~number> — go back recent commits based on number
+	git checkout HEAD <file> — show previous commit for file
+		git checkout -- <file> — same thing
+git checkout <branch-name> return detached head to current commit on branch.
+git checkout --track <remote>/<branch>
+
+git restore <file name> — restore file back to HEAD 
+git restore --staged <file.name> — remove file from staging area
+
+git reset <commit hash#> — reset repository to pior commit hash (removes commits, not changes)
+git reset --hard <commit hash#> — removes commits and changes (hard reset)
+
+git revert <commit hash#> — revert to prior commit hash# without deleting commits (better for collaboration)
+
+git ignore
+
+======
+ GitHub 
+======
+
+Uploading local project to GitHub:
+1. Create new empty GitHub repo
+2. git remote add <name(origin)> <url> 
+    1. git remote -v
+
+Clone repo to local machine:
+1. Create new GitHub repo
+2. git clone <url> — will create a directory within current directory 
+    1. Remote comes set up this way
+
+git push <remote><branch>
+	git push origin master
+git push -u <remote><branch> — set upstream to add to branch later on
+
+git clone <url> — clone repository onto local machine from remote
+
+git branch -M <new-branch-name> — Master => Main
+
+git fetch <remote> — updates local repository, not workspace. 
+
+git pull <remote> <branch> — updates local repo and working directory
+	git pull — shortcut to pull current branch
+
+README.md — Markdown (syntax)
+
+GitHub Gists
+GitHub Pages - user sites & project sites

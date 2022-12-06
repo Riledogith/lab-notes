@@ -1,0 +1,17 @@
+Terminal Commands:
+
+ls — List 
+open . -- open folder/view content
+
+pwd — print working directory
+cd — change directory
+cd.. — change directory back
+
+clear — clear terminal
+
+touch — creates file within the current directory (ex. touch purple.js)
+mkdir — creates folder within current directory 
+rm — delete files (does not go into trash, permanent)
+rm -rf — delete directories 
+
+- Are modifiers that modify the commands
